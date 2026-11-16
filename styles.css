@@ -1,0 +1,46 @@
+:root{--navy:#0e2849;--teal:#12808a;--ink:#1c3350;--muted:#5a6f85;--sky:#eef4f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 "Avenir Next",Montserrat,"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* Hero: the ocean image fills the first screen */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:#cfe0ea url(assets/hero.jpg) 60% 100%/cover no-repeat;color:var(--navy);padding:clamp(22px,4vw,56px) clamp(22px,5vw,84px);display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{width:clamp(42px,4.4vw,60px);height:auto;display:block}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-size:clamp(21px,2.3vw,32px);font-weight:600;letter-spacing:-.01em}
+.brand-text em{font-style:normal;font-size:clamp(10px,.9vw,12.5px);letter-spacing:.42em;text-transform:uppercase;color:var(--teal);margin-top:6px;font-weight:600}
+.bar nav{display:flex;gap:clamp(18px,2.4vw,34px);font-size:15px;font-weight:600}
+.bar nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.bar nav a:hover,.bar nav a:focus-visible{border-color:var(--teal)}
+.hero-copy{margin-top:clamp(48px,11vh,130px);max-width:960px}
+.hero h1{margin:0 0 18px;font-size:clamp(34px,5.1vw,70px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.hero-copy p{margin:0;font-size:clamp(18px,1.9vw,27px);font-weight:300;line-height:1.5;max-width:22em}
+.rule{display:block;width:110px;height:2px;background:#4aa7b3;margin-top:clamp(26px,4vh,44px)}
+
+/* Vision */
+.vision{max-width:1040px;margin:0 auto;padding:clamp(72px,11vw,140px) clamp(22px,5vw,48px) clamp(56px,8vw,100px)}
+.eyebrow{margin:0 0 18px;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--teal)}
+h2{margin:0 0 26px;font-size:clamp(28px,4vw,50px);font-weight:600;letter-spacing:-.025em;line-height:1.15;color:var(--navy);max-width:17em}
+.lede{font-size:clamp(18px,1.7vw,22px);font-weight:300;line-height:1.7;color:#3d5570;max-width:36em;margin:0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,4vw,54px);margin:clamp(48px,7vw,84px) 0 0;border-top:1px solid #d5e1e8;padding-top:clamp(28px,4vw,44px)}
+.trio h3{margin:0 0 8px;font-size:21px;font-weight:600;color:var(--navy);letter-spacing:-.01em}
+.trio p{margin:0;font-size:15.5px;color:var(--muted);line-height:1.65}
+.closing{margin:clamp(48px,7vw,84px) 0 0;font-size:clamp(19px,2vw,25px);font-weight:500;color:var(--navy)}
+
+/* Contact */
+.contact{background:var(--navy);color:#fff;text-align:center;padding:clamp(64px,9vw,110px) 22px}
+.contact .eyebrow{color:#7fd3d6}
+.contact a{font-size:clamp(19px,3.2vw,34px);font-weight:500;text-decoration:none;border-bottom:2px solid #4aa7b3;padding-bottom:4px;overflow-wrap:anywhere}
+.contact a:hover,.contact a:focus-visible{color:#9be3e4}
+
+footer{background:#0a1f3a;color:#9db1c6;font-size:12.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:22px clamp(22px,5vw,84px)}
+
+@media(max-width:720px){
+  .hero{background-position:82% 100%}
+  .hero-copy{margin-top:9vh}
+  .trio{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
