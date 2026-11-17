@@ -11,8 +11,10 @@
   <meta property="og:title" content="Tidal Frame Systems | Integrated water, energy and food systems">
   <meta property="og:description" content="Tidal Frame Systems is developing solar-powered desalination, controlled-environment agriculture and environmental sensing as one integrated system. Early-stage; open to research and pilot partners.">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20261117">
+  <!-- Safety net: keeps any image or SVG from widening the page, even with a stale cached stylesheet. -->
+  <style>img,svg{max-width:100%;height:auto}html,body{overflow-x:clip}</style>
+  <link rel="stylesheet" href="styles.css?v=20261117">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -20,7 +22,7 @@
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="#main" aria-label="Tidal Frame Systems, back to top">
-        <img src="assets/tidalframe-mark.png" alt="" width="44" height="43">
+        <img src="assets/tidalframe-mark.png?v=20261117" alt="" width="44" height="43">
         <span class="brand-text"><strong>Tidal Frame</strong><em>Systems</em></span>
       </a>
       <nav aria-label="Main">
@@ -87,8 +89,16 @@
       </div>
     </section>
 
+    <!-- VISION BAND: concept rendering, captioned as a concept -->
+    <section class="vision-band" aria-label="Long-term concept">
+      <figure>
+        <img src="assets/hero.jpg?v=20261117" alt="Concept rendering of floating platforms at sea, with glass growing domes, a storage tank and solar canopies." width="1672" height="941" decoding="async">
+        <figcaption><span>Long-term concept</span> Rendering only. Not a built system. <a href="#roadmap">See the roadmap →</a></figcaption>
+      </figure>
+    </section>
+
     <!-- PROBLEM -->
-    <section class="section" aria-labelledby="problem-title">
+    <section class="section problem" aria-labelledby="problem-title">
       <div class="wrap">
         <h2 class="visually-hidden" id="problem-title">The problem</h2>
         <ul class="problem-list">
@@ -108,7 +118,7 @@
 
         <div class="card-grid">
           <!-- A. Sustainable Water -->
-          <article class="tech-card" data-status="coming-soon" aria-labelledby="card-water-title">
+          <article class="tech-card" data-status="exploring" aria-labelledby="card-water-title">
             <figure class="tech-card__figure">
               <svg class="dg" viewBox="0 0 320 180" role="img" aria-label="Line diagram of a solar panel powering a pump and membrane unit that fills a freshwater tank, with sensor points marked.">
                 <polygon points="20,60 76,44 84,64 28,80"/>
@@ -129,7 +139,7 @@
                 <circle cx="274" cy="92" r="4" class="s"/>
               </svg>
             </figure>
-            <p class="tech-card__status">Coming soon</p>
+            <p class="tech-card__status">Exploring</p>
             <h3 class="tech-card__title" id="card-water-title">Solar-Powered Freshwater Production</h3>
             <p class="tech-card__body">We are designing compact desalination and water-treatment units that run on solar power, for sites without dependable grid or municipal supply. The goal is a decentralized source of freshwater whose output and quality are measured continuously.</p>
             <p class="tech-card__milestone"><b>Next milestone</b>A bench unit completes a continuous multi-day run with logged water output, energy use per unit of water, and product-water conductivity.</p>
@@ -137,7 +147,7 @@
           </article>
 
           <!-- B. Intelligent Agriculture -->
-          <article class="tech-card" data-status="coming-soon" aria-labelledby="card-agri-title">
+          <article class="tech-card" data-status="in-development" aria-labelledby="card-agri-title">
             <figure class="tech-card__figure">
               <svg class="dg" viewBox="0 0 320 180" role="img" aria-label="Line drawing of a three-tier hydroponic rack with a recirculating water loop.">
                 <path d="M100 30V160M220 30V160M130 16V146M250 16V146M100 30H220L250 16H130Z"/>
@@ -151,14 +161,14 @@
                 <circle cx="240" cy="172" r="4" class="s"/>
               </svg>
             </figure>
-            <p class="tech-card__status">Coming soon-ish</p>
+            <p class="tech-card__status">In development</p>
             <h3 class="tech-card__title" id="card-agri-title">Controlled-Environment Food Production</h3>
             <p class="tech-card__body">We are developing hydroponic growing systems that use treated water and monitored nutrient delivery to grow crops with less water and steadier yields. The intent is dependable local food where soil, rainfall or climate make field farming unreliable.</p>
             <p class="tech-card__milestone"><b>Next milestone</b>One full crop cycle is completed with recorded water use and yield, compared against a cited published baseline.</p>
           </article>
 
           <!-- C. AI and Environmental Intelligence -->
-          <article class="tech-card" data-status="coming-soon" aria-labelledby="card-sensing-title">
+          <article class="tech-card" data-status="in-development" aria-labelledby="card-sensing-title">
             <figure class="tech-card__figure">
               <svg class="dg" viewBox="0 0 320 180" role="img" aria-label="Schematic of four sensor nodes sending readings to a single monitoring trace. Illustrative, not measured data.">
                 <path d="M46 40L90 92M46 75L90 92M46 110L90 92M46 145L90 92M90 92H120"/>
@@ -175,7 +185,7 @@
                 <text x="296" y="168" text-anchor="end">ILLUSTRATIVE</text>
               </svg>
             </figure>
-            <p class="tech-card__status">Coming eventually</p>
+            <p class="tech-card__status">In development</p>
             <h3 class="tech-card__title" id="card-sensing-title">Environmental Sensing and Decision Support</h3>
             <p class="tech-card__body">We are building a sensing and data layer that tracks water quality, energy and growing conditions across a system in real time. Operators get early warning and decision support first; automated control follows only when the data justifies it.</p>
             <p class="tech-card__milestone"><b>Next milestone</b>A sensor node logs at least 30 days of continuous data (for example conductivity, temperature, pH, flow) and a sample dataset is published.</p>
@@ -183,7 +193,7 @@
           </article>
 
           <!-- D. Integrated Resource Systems -->
-          <article class="tech-card" data-status="coming-soon" aria-labelledby="card-platform-title">
+          <article class="tech-card" data-status="exploring" aria-labelledby="card-platform-title">
             <figure class="tech-card__figure">
               <svg class="dg" viewBox="0 0 320 180" role="img" aria-label="Block diagram of three linked loops for energy, water and food inside a monitoring ring.">
                 <circle cx="160" cy="90" r="80" class="bus"/>
@@ -196,7 +206,7 @@
                 <text x="224" y="26">MONITORING</text>
               </svg>
             </figure>
-            <p class="tech-card__status">Coming after a lot more coffee</p>
+            <p class="tech-card__status">Exploring</p>
             <h3 class="tech-card__title" id="card-platform-title">Integrated Water, Energy and Food Platform</h3>
             <p class="tech-card__body">Our long-term aim is a single platform in which solar energy, freshwater production and agriculture are sized and operated together instead of as separate projects. Coordinating them should cut wasted energy and water and make the whole system simpler to deploy and maintain.</p>
             <p class="tech-card__milestone"><b>Next milestone</b>A documented system model exists and at least two subsystems have run together on the bench.</p>
@@ -218,7 +228,10 @@
                 <path d="M126 40H156M126 86H156M126 132H156" class="w"/>
               </svg>
             </figure>
-            <p class="tech-card__status">Coming before the heat death of the universe</p>
+            <div class="tech-card__status-row">
+              <p class="tech-card__status">Coming soon</p>
+              <p class="tech-card__status-note">First entry in progress.</p>
+            </div>
             <h3 class="tech-card__title" id="card-notes-title">Research Notes and Pilot Partnerships</h3>
             <p class="tech-card__body">This is where we will publish test results, technical notes and field milestones as they are completed. We welcome conversations with researchers, growers, utilities and coastal communities about pilot sites and joint studies.</p>
             <p class="tech-card__milestone"><b>Next milestone</b>The first dated technical note or test log is published at /notes/.</p>
@@ -256,15 +269,15 @@
         <div class="status-grid">
           <div class="status-col">
             <h3>Today</h3>
-            <p>Founding team, system concept and technical plan. Hardware and software integration is underway, with current work focused on software development.</p>
+            <p>Founding team, system concept and technical plan.</p>
           </div>
           <div class="status-col">
             <h3>In development</h3>
-            <p>Hardware and software integration across the five technology areas above, led by software development.</p>
+            <p>Software for the sensing and data layer, integration of sensor hardware with that software, and a hydroponic subsystem for bench testing.</p>
           </div>
           <div class="status-col">
             <h3>Research concepts</h3>
-            <p>Offshore and floating deployment, shown as a long-term concept in the roadmap below.</p>
+            <p>A solar desalination subsystem for bench testing; offshore and floating deployment as a long-term concept.</p>
           </div>
           <div class="status-col">
             <h3>Long-term aims</h3>
@@ -293,10 +306,6 @@
             <p>We are starting small, on land, and building toward the water.</p>
             <p>Beyond the four phases above, we imagine floating, sun-powered platforms that turn seawater into freshwater, and freshwater into harvests, right beside the coastal communities that need them most.</p>
           </div>
-          <figure>
-            <img src="assets/hero.jpg" alt="Concept rendering of floating platforms at sea, with glass growing domes, a storage tank and solar canopies." width="1672" height="941" loading="lazy" decoding="async">
-            <figcaption>Concept rendering. Not a built system.</figcaption>
-          </figure>
         </div>
       </div>
     </section>

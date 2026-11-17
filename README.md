@@ -21,6 +21,10 @@ Live at https://tidalframesystems.github.io/
 Open `index.html` and edit the text inside the relevant `<section>` (each one is marked with a comment such as `<!-- STATUS -->`).
 **Every time you change the site, update the "Last updated" date in the footer.**
 
+### Cache-busting
+
+Browsers and GitHub Pages cache files for about 10 minutes. If a visitor gets new HTML with an old cached stylesheet, the page can break. So whenever `styles.css` or an asset changes, bump the `?v=YYYYMMDD` query string on **every** reference to it in `index.html` (stylesheet, favicon, logo, `hero.jpg`). Leave the small inline `<style>` safety net in `<head>` in place; it stops images from widening the page even when a stale stylesheet is cached.
+
 ## Change a technology card's status
 
 Each card is an `<article class="tech-card" data-status="...">`. Change **both** of these together:
@@ -36,8 +40,7 @@ Each card is an `<article class="tech-card" data-status="...">`. Change **both**
 
 Add a `/notes/` entry explaining why the status changed.
 
-Currently all five cards use `data-status="coming-soon"`, but the visible labels escalate on purpose, one per card in page order: "Coming soon", "Coming soon-ish", "Coming eventually", "Coming after a lot more coffee", "Coming before the heat death of the universe". When a card is promoted, replace its joke label with the plain label for its new status.
-
+The Research Notes card also has a small note beside its label ("First entry in progress."). Delete that `tech-card__status-note` line when the first `/notes/` entry is published.
 ## Mark a roadmap phase as current
 
 In the `<!-- ROADMAP -->` section, move `class="is-current"` and `<span class="chip chip--current">Current</span>` to the new phase, and set the previous phase's chip back to a plain `<span class="chip">` reading `Complete` (once there is a dated note to link to). Phase 1 is current as of 17 November 2026.
